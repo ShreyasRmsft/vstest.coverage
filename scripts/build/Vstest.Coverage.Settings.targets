@@ -52,9 +52,6 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk">
           <Version>$(NETTestSdkPreviousVersion)</Version>
         </PackageReference>
-        <PackageReference Include="Microsoft.NET.Test.Sdk">
-          <Version>$(NETTestSdkPreviousVersion)</Version>
-        </PackageReference>
       </ItemGroup>
     </When>
   </Choose>

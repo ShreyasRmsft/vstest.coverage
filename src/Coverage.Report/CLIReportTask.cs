@@ -26,11 +26,6 @@
 
         public override bool Execute()
         {
-            //this.trace.Log("=================================================" + Environment.NewLine +
-            //               "|   Module                     |  Coverage      |" + Environment.NewLine +
-            //               "=================================================" + Environment.NewLine +
-            //               "| Spekt.Vstest.Coverage.Report |  99.99%        |" + Environment.NewLine +
-            //               "=================================================");
             Environment.SetEnvironmentVariable("Spekt_TraceDataCollectorDirectoryPath", TraceDataCollectorDirectoryPath);
 
             return true;
