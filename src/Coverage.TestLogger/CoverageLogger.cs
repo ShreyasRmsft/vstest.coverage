@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
                     try
                     {
                         var codeCoverageInternalRepresentation = new CodeCoverageReader().ParseCoverageFile(coverageFileContents, coverageFileContents.Root.Name.Namespace);
-                        var lcovFilePath = Path.Combine(Path.GetDirectoryName(codeCoverageFile), "lcov.info");
+                        var lcovFilePath = Path.Combine(new DirectoryInfo(Path.GetDirectoryName(codeCoverageFile)).Parent.FullName, "lcov.info");
                         File.WriteAllText(lcovFilePath, new Generator().GenerateLcovCoverageData(codeCoverageInternalRepresentation).ToString());
                     }
                     catch (Exception err)
